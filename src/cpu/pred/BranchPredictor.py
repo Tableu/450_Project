@@ -29,6 +29,11 @@ from m5.SimObject import SimObject
 from m5.params import *
 from m5.proxy import *
 
+class Perceptron(BranchPredictor):
+    type = 'Perceptron'
+    cxx_class = 'Perceptron'
+    cxx_header = "cpu/pred/perceptron.hh"
+
 class IndirectPredictor(SimObject):
     type = 'IndirectPredictor'
     cxx_class = 'IndirectPredictor'
